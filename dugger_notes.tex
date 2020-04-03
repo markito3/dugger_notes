@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\begin{document}
+
+Appendix A, first unnumbered equation is equivalent to 
+
+$${d^3\sigma \over d\cos\theta d\phi E_\gamma}$$
+
+which would make eq. (A1)
+
+$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\cos\theta_i}_{\cos\theta_{i-1}}\int^{\phi_i}_{\phi_{i-1}} {d^3\sigma \over d\cos\theta d\phi dE_\gamma}dE_\gamma d\cos\theta d\phi$$
+
+and since
+
+$${d\cos\theta \over d\theta} = -\sin\theta$$
+
+(A1) becomes
+
+$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\theta_i}_{\theta_{i-1}}\int^{\phi_i}_{\phi_{i-1}} {d^3\sigma \over \sin\theta d\theta d\phi E_\gamma} dE_\gamma \sin\theta d\theta d\phi$$
+
+or
+
+$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\theta_i}_{\theta_{i-1}}\int^{\phi_i}_{\phi_{i-1}} {d^3\sigma \over d\theta d\phi E_\gamma} dE_\gamma d\theta d\phi$$
+
+as one might expect.
+
+\end{document}
+
