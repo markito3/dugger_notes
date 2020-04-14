@@ -14,6 +14,10 @@ and since
 
 $${d\cos\theta \over d\theta} = -\sin\theta$$
 
+we get
+
+$$ d\Omega = d\cos\theta d\phi = -\sin\theta d\theta d\phi $$
+
 (A1) becomes
 
 $$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\theta_i}_{\theta_{i-1}}\int^{\phi_i}_{\phi_{i-1}} {d^3\sigma \over \sin\theta d\theta d\phi E_\gamma} dE_\gamma \sin\theta d\theta d\phi$$
@@ -23,6 +27,19 @@ or
 $$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\theta_i}_{\theta_{i-1}}\int^{\phi_i}_{\phi_{i-1}} {d^3\sigma \over d\theta d\phi E_\gamma} dE_\gamma d\theta d\phi$$
 
 as one might expect.
+
+In eq. (A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
+
+Probability of scattering is $p = \sigma/A$ where $\sigma$ is the total cross section for scattering, $A$ is the nominal area where scattering can occur. Let us call $N_t$ the number of target particles and $N_b$ the number of beam particles. $N_t = \rho AL$ where $\rho$ is then target number volume density and $L$ is the length of the target. The number of scattering events $N_s$ is then
+$$
+N_s = N_b N_t p = N_b(\rho A L){\sigma\over A} = N_b\rho L\sigma
+$$
+
+If we define the yield $Y$ as the number of detected scattering events, then $Y = \epsilon N_s$ where $\epsilon$ is the detection efficiency. So
+$$
+Y = N_b\rho L\sigma\epsilon
+$$
+which recovers eq.~(A2).
 
 \end{document}
 
