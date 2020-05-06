@@ -32,16 +32,6 @@ $$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^
 
 as one might expect.
 
-If we express this as a function of $\phi$, using the middle form, we get
-
-$$\Delta\sigma^{i,j}(\phi) = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}} {d^2\sigma(\phi) \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta$$
-
-And if the detection efficiency in the energy/polar-angle bin as a function of $\phi$ is $\epsilon^{i,j}(\phi)$, the the apparent or observed cross section increment is
-
-$$\Delta\sigma^{*i,j}(\phi) = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}} \epsilon^{i,j}(\phi){d^2\sigma(\phi) \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta$$
-
-In eq.~(A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
-
 Probability of scattering is $p = \sigma/A$ where $\sigma$ is the total cross section for scattering, $A$ is the nominal area where scattering can occur. Let us call $N_t$ the number of target particles and $N_\gamma$ the number of beam particles. $N_t = \rho AL$ where $\rho$ is then target number volume density and $L$ is the length of the target. The number of scattering events $N_s$ is then
 $$
 N_s = N_\gamma N_t p = N_\gamma(\rho A L){\sigma\over A} = N_\gamma\rho L\sigma
@@ -55,14 +45,13 @@ which recovers eq.~(A2). The yield on one bin is
 $$
 Y^{i,j,k} = N^i_\gamma\rho L\Delta\sigma^{i,j,k}\epsilon^{i,j,k}
 $$
-Expressed as a function of $\phi$ rather than the index $k$ gives
+
+Define the yield per unit phi interval in the $i$th energy bin and $j$th theta bin
 $$
-Y^{i,j}(\phi) = N^i_\gamma\rho L\Delta\sigma^{i,j}(\phi)\epsilon^{i,j}(\phi)
+Y^{i,j}(\phi) \approx { Y^{i,j,k} \over \Delta\phi_k }
 $$
-The normalized yield, $\tilde Y$ is defined as
-$$
-\tilde Y^{i,j}(\phi) = {Y^{i,j}(\phi) \over N^i_\gamma} = \rho L\Delta\sigma^{i,j}(\phi)\epsilon^{i,j}(\phi)
-$$
+
+In eq.~(A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
 
 \end{document}
 
