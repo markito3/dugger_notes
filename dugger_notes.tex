@@ -1,5 +1,8 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{graphicx}
+
 \begin{document}
 
 Appendix A, first unnumbered equation is equivalent to 
@@ -46,12 +49,23 @@ $$
 Y^{i,j,k} = N^i_\gamma\rho L\Delta\sigma^{i,j,k}\epsilon^{i,j,k}
 $$
 
-Define the yield per unit phi interval in the $i$th energy bin and $j$th theta bin
+\begin{equation}
+{d\sigma_\perp \over d\Omega} = {d\sigma_a \over d\Omega}[1+P_\perp\Sigma\cos 2\phi] \tag{A3} \\
+\end{equation}
+\begin{equation}
+{d\sigma_\parallel \over d\Omega} = {d\sigma_a \over d\Omega}[1-P_\parallel\Sigma\cos 2\phi] \tag{A4} \\
+\end{equation}
+
+\includegraphics[width=\linewidth]{assymetry.png}
+
+Define the yield per unit $\phi$ interval in the $i$th energy bin and $j$th theta bin
 $$
 Y^{i,j}(\phi) \approx { Y^{i,j,k} \over \Delta\phi_k }
 $$
 
 In eq.~(A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
+
+
 
 \end{document}
 

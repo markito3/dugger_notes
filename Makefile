@@ -8,3 +8,6 @@ all: $(BASENAME).pdf
 
 install: $(BASENAME).pdf
 	install $< /home/marki/google_drive/documents_work/pi-Delta++_review
+
+clean:
+	$(RM) *.pdf *.aux *.log
