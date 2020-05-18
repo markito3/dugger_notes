@@ -61,6 +61,7 @@ Define the yield per unit $\phi$ interval in the $i$th energy bin and $j$th thet
 $$
 Y^{i,j}(\phi) = N^i_\gamma\rho L\Delta\sigma^{i,j}_{\rm obs}(\phi)
 $$
+where we have made the approximation that $\epsilon^{i,j,k} \approx \epsilon(E_\gamma,\theta,\phi)$
 
 In eq.~(A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
 
@@ -71,7 +72,29 @@ In eq.~(A5) all cross sections are measured for the same target. Flux and target
 {d\sigma_\parallel \over d\Omega} = {d\sigma_a \over d\Omega}[1-P_\parallel\Sigma\cos 2\phi] \tag{A4} \\
 \end{equation}
 
-\includegraphics[width=\linewidth]{assymetry.png}
+\includegraphics[width=4in]{assymetry.png}
+
+\begin{equation}
+{d\sigma_a \over d\Omega} = {1 \over 2} \left( {d\sigma_\perp \over d\Omega} + {d\sigma_\parallel \over d\Omega} \right) \tag{A5} \\
+\end{equation}
+
+\begin{equation}
+  \begin{split}
+f^{i,j}(\phi) & = \rho L\int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^2\sigma \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta \\
+& = \rho L\int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta \\
+& {\rm and} \\
+& \tilde Y^{i,j}(\phi) = {Y^{i,j}(\phi) \over N^i_\gamma}
+\end{split} \tag{A6}
+\end{equation}
+
+So
+\begin{equation}
+  \begin{split}
+    \tilde Y^{i,j}(\phi) & = \rho L\Delta\sigma^{i,j}_{\rm obs}(\phi) \\
+    & = \rho L\int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta \\
+    & = f^{i,j}(\phi)
+  \end{split}
+\end{equation}
 
 \end{document}
 
