@@ -7,60 +7,62 @@
 
 Appendix A, first unnumbered equation is equivalent to 
 
-$${d^3\sigma \over d\cos\theta d\phi E_\gamma}$$
+\begin{equation}
+      {d^3\sigma \over d\cos\theta d\phi E_\gamma}
+\end{equation}
 
 which would make eq. (A1)
 
-$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\cos\theta_j}_{\cos\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\cos\theta d\phi dE_\gamma}dE_\gamma d\cos\theta d\phi$$
+\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\cos\theta_j}_{\cos\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\cos\theta d\phi dE_\gamma}dE_\gamma d\cos\theta d\phi\end{equation}
 
 and since
 
-$${d\cos\theta \over d\theta} = -\sin\theta$$
+\begin{equation}{d\cos\theta \over d\theta} = -\sin\theta\end{equation}
 
 we get
 
-$$ d\Omega = d\cos\theta d\phi = -\sin\theta d\theta d\phi $$
+\begin{equation} d\Omega = d\cos\theta d\phi = -\sin\theta d\theta d\phi \end{equation}
 
 (A1) becomes
 
-$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over \sin\theta d\theta d\phi dE_\gamma} dE_\gamma \sin\theta d\theta d\phi$$
+\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over \sin\theta d\theta d\phi dE_\gamma} dE_\gamma \sin\theta d\theta d\phi\end{equation}
 
 or
 
-$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^2\sigma \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta d\phi$$
+\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^2\sigma \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta d\phi\end{equation}
 
 or
 
-$$\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta d\phi$$
+\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta d\phi\end{equation}
 
 as one might expect.
 
 We introduce and ``observed'' cross section where detector efficiency $\epsilon(E_\gamma,\theta,\phi)$ is taken into account.
-$$
+\begin{equation}
 \Delta\sigma^{i,j,k}_{\rm obs} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta
-$$
+\end{equation}
 and introduce the observed cross section in a bin of energy and polar angle per unit azimulthal angle
-$$
-\Delta\sigma^{i,j}_{\rm obs}(\phi) \approx {\Delta\sigma^{i,j,k}_{\rm obs} \over \phi_k - \phi_{k-1}} \approx \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta$$
+\begin{equation}
+\Delta\sigma^{i,j}_{\rm obs}(\phi) \approx {\Delta\sigma^{i,j,k}_{\rm obs} \over \phi_k - \phi_{k-1}} \approx \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta\end{equation}
 
 The probability of scattering is $p = \sigma/A$ where $\sigma$ is the total cross section for scattering, $A$ is the nominal area where scattering can occur. Let us call $N_t$ the number of target particles and $N_\gamma$ the number of beam particles. $N_t = \rho AL$ where $\rho$ is then target number volume density and $L$ is the length of the target. The number of scattering events $N_s$ is then
-$$
+\begin{equation}
 N_s = N_\gamma N_t p = N_\gamma(\rho A L){\sigma\over A} = N_\gamma\rho L\sigma
-$$
+\end{equation}
 
 If we define the yield $Y$ as the number of detected scattering events, then $Y = \epsilon N_s$ where $\epsilon$ is the detection efficiency. So
-$$
+\begin{equation}
 Y = N_\gamma\rho L\sigma\epsilon
-$$
+\end{equation}
 which recovers eq.~(A2). The yield on one bin is
-$$
+\begin{equation}
 Y^{i,j,k} \approx N^i_\gamma\rho L\Delta\sigma^{i,j,k}\epsilon^{i,j,k} \\
 \approx N^i_\gamma\rho L\Delta\sigma^{i,j,k}_{\rm obs}
-$$
+\end{equation}
 Define the yield per unit $\phi$ interval in the $i$th energy bin and $j$th theta bin
-$$
+\begin{equation}
 Y^{i,j}(\phi) = N^i_\gamma\rho L\Delta\sigma^{i,j}_{\rm obs}(\phi)
-$$
+\end{equation}
 where we have made the approximation that $\epsilon^{i,j,k} \approx \epsilon(E_\gamma,\theta,\phi)$
 
 In eq.~(A5) all cross sections are measured for the same target. Flux and target density is eliminated by definition of cross section.
@@ -95,6 +97,6 @@ So
     & = f^{i,j}(\phi)
   \end{split}
 \end{equation}
-
+What? $\tilde Y^{i,j}(\phi)$ and $f^{i,j}(\phi)$ are the same thing?
 \end{document}
 
