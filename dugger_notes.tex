@@ -80,6 +80,20 @@ In eq.~(A5) all cross sections are measured for the same target. Flux and target
 {d\sigma_a \over d\Omega} = {1 \over 2} \left( {d\sigma_\perp \over d\Omega} + {d\sigma_\parallel \over d\Omega} \right) \tag{A5} \\
 \end{equation}
 
+Polarization $P$ is a function of energy. Analyzing power $\Sigma$ is a function of energy and polar angle. So we could write
+
+\begin{equation}
+{d^2\sigma^{i,j}_\perp \over dE_\gamma d\theta} = {d^2\sigma^{i,j}_a \over dE_\gamma d\theta}[1+P^i_\perp\Sigma^{i,j}\cos 2\phi] \\
+\end{equation}
+\begin{equation}
+{d^2\sigma^{i,j}_\parallel \over dE_\gamma d\theta} = {d^2\sigma^{i,j}_a \over dE_\gamma d\theta}[1+P^i_\parallel\Sigma^{i,j}\cos 2\phi] \\
+\end{equation}
+\begin{equation}
+  {d^2\sigma^{i,j}_a \over dE_\gamma d\theta}
+  = {1 \over 2} \left( {d^2\sigma^{i,j}_\perp \over dE_\gamma d\theta}
+  + {d^2\sigma^{i,j}_\parallel \over dE_\gamma d\theta} \right)
+\end{equation}
+
 \begin{equation}
   \begin{split}
 f^{i,j}(\phi) & = \rho L\int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^2\sigma \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta \\
