@@ -32,19 +32,15 @@ we get
 
 or
 
-\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^2\sigma \over d\Omega dE_\gamma} dE_\gamma \sin\theta d\theta d\phi\end{equation}
-
-or
-
 \begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta d\phi\end{equation}
 
 as one might expect.
 
-We introduce and ``observed'' cross section where detector efficiency $\epsilon(E_\gamma,\theta,\phi)$ is taken into account.
+We introduce an ``observed'' cross section where detector efficiency $\epsilon(E_\gamma,\theta,\phi)$ is taken into account.
 \begin{equation}
-\Delta\sigma^{i,j,k}_{\rm obs} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta
+\Delta\sigma^{i,j,k}_{\rm obs} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta d\phi
 \end{equation}
-and introduce the observed cross section in a bin of energy and polar angle per unit azimulthal angle
+and introduce the observed cross section in a bin of energy and polar angle per unit azimuthal angle
 \begin{equation}
 \Delta\sigma^{i,j}_{\rm obs}(\phi) \approx {\Delta\sigma^{i,j,k}_{\rm obs} \over \phi_k - \phi_{k-1}} \approx \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta\end{equation}
 
@@ -137,6 +133,11 @@ Note that $f^{i,j}_a(\phi)$ is never defined in the paper.
 \begin{equation}
   \tilde Y^{i,j}_\parallel = \int^{2\pi}_0 f^{i,j}_a(\phi)[1-P^i_\parallel\Sigma^{i,j}\cos2\phi]d\phi
   \tag{A9}
+\end{equation}
+
+\begin{equation}
+  f^{i,j}_a(\phi) = a_0 + \sum_{n=1}^\infty [a_n \cos n\phi + b_n\sin n\phi]
+  \tag{A10}
 \end{equation}
 
 \end{document}
