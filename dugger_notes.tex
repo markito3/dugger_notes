@@ -21,14 +21,12 @@ which is equivalent to
 \end{equation}
 Eq. (A1) is internally inconsistent. Cross section should be differential in $\phi$. Limits of integration for $\theta$ should be those for $\cos\theta$. I.e.,
 \begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int^{\cos\theta_j}_{\cos\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over d\cos\theta d\phi dE_\gamma}dE_\gamma d\cos\theta d\phi\end{equation}
-and since
-\begin{equation}{d\cos\theta \over d\theta} = -\sin\theta\end{equation}
-we get
-\begin{equation} d\Omega = d\cos\theta d\phi = -\sin\theta d\theta d\phi \end{equation}
+
+Since cross sections are always positive definite, we always want to integrate from lower values of the arguments (to the cross section function) to higher values.
 
 (A1) becomes
 
-\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_j}^{\theta_{j-1}}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over \sin\theta d\theta d\phi dE_\gamma} dE_\gamma \sin\theta d\theta d\phi\end{equation}
+\begin{equation}\Delta\sigma^{i,j,k} = \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j}\int^{\phi_k}_{\phi_{k-1}} {d^3\sigma \over \sin\theta d\theta d\phi dE_\gamma} dE_\gamma \sin\theta d\theta d\phi\end{equation}
 
 or
 
@@ -44,7 +42,7 @@ and introduce the observed cross section in a bin of energy and polar angle per 
 \begin{equation}
 \Delta\sigma^{i,j}_{\rm obs}(\phi) \approx {\Delta\sigma^{i,j,k}_{\rm obs} \over \phi_k - \phi_{k-1}} \approx \int^{E_i}_{E_{i-1}}\int_{\theta_{j-1}}^{\theta_j} \epsilon(E_\gamma,\theta,\phi) {d^3\sigma \over d\theta d\phi dE_\gamma} dE_\gamma d\theta\end{equation}
 
-The probability of scattering is $p = \sigma/A$ where $\sigma$ is the total cross section for scattering, $A$ is the nominal area where scattering can occur. Let us call $N_t$ the number of target particles and $N_\gamma$ the number of beam particles. $N_t = \rho AL$ where $\rho$ is then target number volume density and $L$ is the length of the target. The number of scattering events $N_s$ is then
+The probability of scattering is $p = \sigma/A$ where $\sigma$ is the total cross section for scattering and $A$ is the nominal area where scattering can occur. Let us call $N_t$ the number of target particles and $N_\gamma$ the number of beam particles. $N_t = \rho AL$ where $\rho$ is then target number volume density and $L$ is the length of the target. The number of scattering events $N_s$ is then
 \begin{equation}
 N_s = N_\gamma N_t p = N_\gamma(\rho A L){\sigma\over A} = N_\gamma\rho L\sigma
 \end{equation}
@@ -53,11 +51,19 @@ If we define the yield $Y$ as the number of detected scattering events, then $Y 
 \begin{equation}
 Y = N_\gamma\rho L\sigma\epsilon
 \end{equation}
-which recovers eq.~(A2). The yield on one bin is
+
+The yield on one bin is
 \begin{equation}
 Y^{i,j,k} \approx N^i_\gamma\rho L\Delta\sigma^{i,j,k}\epsilon^{i,j,k} \\
 \approx N^i_\gamma\rho L\Delta\sigma^{i,j,k}_{\rm obs}
 \end{equation}
+which recovers eq.~(A2).
+
+\begin{equation}
+  \Delta\sigma^{i,j,k} \approx { Y^{i,j,k} \over N^i_\gamma \rho L \epsilon^{i,j,k}}
+  \tag{A2}
+\end{equation}
+
 Define the yield per unit $\phi$ interval in the $i$th energy bin and $j$th theta bin
 \begin{equation}
 Y^{i,j}(\phi) = N^i_\gamma\rho L\Delta\sigma^{i,j}_{\rm obs}(\phi)
